@@ -1,0 +1,159 @@
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}
+\usepackage{hyperref}
+
+% moderncv themes
+\moderncvtheme[green]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Li}
+\familyname{Zhong}
+%\title{Resumé title (optional)}               % optional, remove the line if not wanted
+%\address{170 W 74th St, Apt 1212}{NY, NY 10023}    % optional, remove the line if not wanted
+\mobile{+33 (0)6 38 03 48 35}
+\email{reginald1787@gmail.com}                      % optional, remove the line if not wanted
+\extrainfo{https://github.com/reginald1787}
+%\extrainfo{https://sites.google.com/site/jontuheim/}
+
+ % optional, remove the line if not wanted
+%\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{"They can kill you, but the legalities of eating you are quite a bit dicier" - David Foster Wallace}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Summary}
+5+ years academical training in mathematics, statistics, information and computing science.\\ 
+2+ years industrial experiences in data mining, analyzing, modeling and predicting.\\ 
+Familar to state-of-the-art methods in machine learning, as well as technologies (and tools) in large scale data mining.\\
+Strong programming ability, expert at prototyping and agile development, and also capable to build robust, efficient software systems.\\ 
+Able to bring solutions and deliver insights with limited time and resources.\\  
+See my page (\link{https://sites.google.com/site/jontuheim}) for projects or github (\link{http://github.com/reginald1787} for source codes.
+
+\section{Education}
+\cventry{2014--2015}{University of Paris Sud}{M.S., Probability \& Statistics}{}{}{}
+\cventry{2013--2014}{\'Ecole Polytechnique}{M.S., Applied Mathematics}{}{}{}
+\cventry{2013--2013}{Chinese Academy of Science}{Research Assistant, Institute of Automation}{}{}{}
+\cventry{2009--2013}{University of Science and Technology of China}{B.S., Information \& Computation Science}{}{}{}
+
+\section{Experience}
+\cventry{2014}{Aldebaran Robotics}{R\&D intern}{AI Lab}{}{
+To make robots reacting more intelligent, I introduced causal Bayesian networks and probabilistic graphical models for robot learning and planning. I also worked on designing the robot's motor commands allowing interaction with the robot's surrounding environment. Specifically, the robot can recognize an object by actively saccading the keypoints of logpolar images. 
+\newline
+- Knowledge involved: graphical models, Bayesian networks, causality, Harris corner detection, SIFT algorithm, information entropy.
+\newline
+- Technology used: C++, Python(numpy, scipy, matplotlib, scikit-learn), OpenCV, Nao robot platform, Linux shell programming.  
+}
+
+\cventry{2014}{Google Paris Hash Code}{"Xcode" team leader}{}{}{
+There were two problems in the competition. For 1st problem: we used a divide-and-conquer method to split into small computational geometry problems, and then used Graham-scan algorithm to find the convex hull. For the 2nd problem: we firstly used a stochastic algorithm to obtain initial results, then we optimized it by greedy algorithm. We also added some constraints to avoid local minima.
+\newline
+- Technology used: Python, stochastic algorithm, Graham-scan algorithm.
+}
+
+
+\cventry{2014}{Kaggle Data Competition}{Acquire Valued Shoppers Challenge}{}{}{
+The goal of this challenge is trying to predict customers' future behaviors given the past transactions history. I have done following works for the competition:\\
+1) data reduction: removing irrelevant entries reduce raw data from 20GB into 2GB.\\
+2) behavior modeling: analyze the key factors of a purchase action from both customers' perspectives and items' characteristics.\\
+3) feature engineering: transform raw feature information (categories, names, dates, etc.) into meaningful numerical values.\\
+4) classification: used regression, SVM, random forests, naive Bayes and neural networks for classifiers.\\
+5) evaluation: took the scores as feedback, restarted modeling and feature selection and adjusted parameters of classification algorithms.
+\newline
+- Knowledge involved: supervised clustering (SVM, regression, random forests, naive Bayes, neural networks), data mining and engineering
+\newline 
+- Technology used: Python(numpy, scikit-learn, pandas), Liblinear, LibSVM, C++ 
+}
+
+
+% \cventry{2014}{Ecole Polytechnique}{Graduate Research Assistant}{Centre de Math\'ematiques Appliqu\'ees}{}{
+% Separated different sources from mixture of observations by Independent Component Analysis (ICA) on songs and heartbeats data. Implemented joint approximate diagonalization of positive matrices based on block maximum likelihood estimation. Designed online iterative algorithm by using stochastic gradient descent and used newton-gradient technique to accelerate the converging speed.
+% \newline
+% - Knowledge involved: signal processing, ICA, maximum likelihood estimation, matrix decomposition, gradient descent, Kullback-Leibler divergence, mutual information.
+% \newline
+% - Technologies used: Python, Matlab, Scilab.
+% }
+
+
+\cventry{2013}{PayPal}{Statistical analyst intern}{Advanced Risk Sciences}{}{
+Built unusual-pattern detecting model for fraud-transactions based on multi-regression. Assembled a multi-threading computing framework for large scale data analyzing. Designed automatical analyzing process including pulling raw data from Teradata warehouse, analyzing data through distributed computing framework and presenting/visualizing the results.
+\newline
+- knowledge involved: logistic regression, Pearson correlation testing, pattern classification, statistical modeling and analyzing
+\newline
+- Technology used: Teradata, SAS, Python(numpy, pandas, BeautifulSoup), Linux shell
+}
+
+
+\cventry{2013}{Microsoft Research Asia}{Research intern}{Data Management, Analytics, and Services}{}{
+During the 9 months internship in Microsoft Research Asia, I mainly participated in 4 projects: \\
+1) online ads displaying and recommendation for advertisers. \\
+2) mining MSN visitors and modeling their behaviors \\
+3) mining telephone records of hotel reservation to develop recommender system for operators. \\
+4) developing a Win 8 desktop application for personalized searching.\\
+% \newline -- online ads displaying and recommendation for advertisers: we basically used collaborative-filtering algorithm and used sparse SVD to achieve real-time efficiency. Also we incorporated content information into topic models to improve recommendation.
+% \newline -- mining MSN visitors and modeling their behaviors: firstly used un-supervised clustering methods for user profile-mining. For typical cluster, built predictive model based on patterns and correlations.
+% \newline -- mining telephone records of hotel reservation to develop recommender system for operators: we used natual language processing (NLP) tool to analyze the needs and requirements of customers. We also used sentiment analysis to determine the customer's satisfactory. 
+% \newline -- developing a Win 8 desktop application for personalized searching: the "Growing Searches" idea originated in Microsoft Research Cambridge, and we implemented the concepts with Bing team. I was in charge of interface design and animation. In particular, I designed and developed the "growing" animation of the "searching tree". 
+All the works were dealing large-scale ($\sim 10$ TB) and multi-form (txt,wav,json,html,csv) datasets. And they were all done in Microsoft "COSMOS" distribution computing platform.
+\newline
+- Knowledge involved: recommendation algorithms, topic model, profile mining, clustering, predictive model, NLP, sentiment analysis, searching.
+\newline
+- Technology used: MySQL, C\#, .NET, distribution system/COSMOS, NLP tool, SVD, WPF.
+}
+
+
+% % PUBLICATIONS
+% \nocite{us:waveCollapsedoesntMatter, us:TDPSFjcp, us:TDPSFrigorous, us:multiscale, us:anisotropic, us:solitongun, us:dipoledelta, us:ionizationPRL, us:dirichleterrorbound, barak:153901, meleslie:wavefrontPaper, meleslie:curveppaer}
+
+\section{Publication and Patent}
+\cventry{Publication}{Zhen zhou, Li Zhong, Liang Wang}{Neurocomputing}{"Locally incremental visual cluster analysis using Markov random field"}{Volume 136, 20 July 2014, Pages 49–55}{}
+\cventry{Patent}{publication number: CN103077404 A}{}{publication date: 01 May 2013}{}{}
+
+% \section{Skills}
+% \cventry{}{Analytical Skills}{}{Experience in statistical/mathematical modeling, data mining and engineering, machine learning and artificial intelligence}{}{}
+% \cventry{}{Programming Languages}{}{Python, C++, C\#, Matlab, R, Shell}{}{}
+% \cventry{}{Natural Languages}{}{English (professional), Chinese (Native), French (fluent)}{}{}
+
+
+\section{Honors and Awards}
+\cventry{2013/2014}{the Jacques Hadamard Fondation Math\'ematique Scholarship}{}{}{}{}{}
+\cventry{2013}{Graduation with Distinction}{top 5\%}{USTC}{}{}{}
+\cventry{2011/2012}{Scholarship for Outstanding Students}{top 10\%}{USTC}{}{}{}
+%\cventry{2011}{Award of Excellence, Microsoft \& Morgan Stanley HPC-In-Finance Challenge}{}{}{}{}
+\cventry{2011}{Silver Award of Mathematical Competition}{}{USTC}{}{}
+\cventry{2010/2011}{the Tang Scholarship}{}{USTC}{}{}
+\cventry{2010}{the Kwang Hua Scholarship}{top 5\%}{USTC}{}{}
+\cventry{2009}{Scholarship for Excellent Freshman}{top 10\%}{USTC}{}{}
+\cventry{2008}{First Prize of National Chemistry Olympiad}{40 out of 3000}{Hunan Province}{}{}
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+% Publications from a BibTeX file
+
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
