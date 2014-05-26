@@ -1,0 +1,158 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathpazo}
+\usepackage[garamond]{mathdesign}
+\textheight=10in
+\pagestyle{empty}
+%\raggedbottom
+\raggedright
+
+%  \renewcommand{\encodingdefault}{cg}
+  %\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+\newcommand{\area}[2]{\vspace*{-9pt} \begin{verse}\textbf{#1}   #2 \end{verse}  }
+\newcommand{\lineunder}{\vspace*{-8pt} \\ \hspace*{-18pt} \hrulefill \\}
+\newcommand{\header}[1]{{\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} \lineunder}
+\newcommand{\employer}[3]{{ \textbf{#1} (#2) \hfill {\emph{#3}} \\  }}
+\newcommand{\publication}[4]{{ #1 \emph{#2}\\  #3\\  }}
+\newcommand{\patent}[3]{{ #1 #2 \\ #3\\  }}
+\newcommand{\contact}[3]{
+\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+#2 \\%\lineunder 
+#3
+\end{center}
+\vspace*{-8pt}
+}
+\newenvironment{achievements}{\begin{list}{$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}}
+\newcommand{\schools}[3]{
+#1 \hfill \hspace*{15pt} \textbf{#2} \hspace*{15pt} #3\\ 
+%#4 $\bullet$  \\
+\vspace*{5pt}
+}
+
+% \newcommand{\school}[4]{
+%  \textbf{#1} #2 $\bullet$ #3\\ 
+% #4 \\
+% }
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Li Zhong}
+%{3700 North Charles Street, Apt 710, Baltimore MD 21218}
+{(+33) 6380-34835 $\bullet$ reginald1787@gmail.com}
+{$\bullet$ https://sites.google.com/site/jontuheim $\bullet$ https://github.com/reginald1787}
+
+\header{Education}
+
+\schools{M.S., Probability \& Statistics}{University of Paris Sud}{2014--2015}
+\schools{M.S., Applied Mathematics}{\'Ecole Polytechnique}{2013--2015}
+%\schools{Research student}{Institute of Automation, Chinese Academy of Science}{2013--2013}
+\schools{B.S., Information \& Computation Science}{University of Science and Technology of China}{2009--2013}
+	
+
+\header{Project Experience}
+
+
+\employer{Aldebaran Robotics - AI Lab }{2014}{R\&D intern}{}
+	\begin{achievements}
+	\item Introduced causal Bayesian networks and probabilistic graphical models for robot learning and planning.
+	\item Extracted keypoints based on fast SIFT algorithm and Harris corner detection from logpolar images.
+	\item Improved object recognition by motivating the robot actively saccading the keypoints. 
+	\item Designed and developed the robot's motor commands allowing interaction with the robot's surrounding environment.
+	\item Integrated with deep learning to deal with information flows.
+	\end{achievements}
+
+\employer{Google Paris Hash Code}{2014}{"Xcoder" team leader}
+	\begin{achievements}
+	\item Used divide-and-conquer methods to split into small computational geometry problems, and then used the Melkman algorithm to find the convex hull of each small patch. Achieved nearly O(n) complexity for 716*1522 points.
+	\item Firstly used a stochastic algorithm to obtain initial results, based on the result, optimized our algorithm by greedy strategy.
+	\end{achievements}
+
+\employer{Kaggle Data Competition}{2014}{Acquire Valued Shoppers Challenge}
+	\begin{achievements}
+	\item Data reduction: removing irrelevant entries reduce raw data from 20GB into 2GB.
+	\item Behavior modeling: analyze the key factors of a purchase action from both customers' perspectives and items' characteristics.
+	\item Feature engineering: transform raw feature information (categories, names, dates, etc.) into meaningful numerical values.
+	\item Classification: used regression, SVM, random forests, naive Bayes and neural networks as classifiers.
+	\item Evaluation: took the scores as feedback, restarted modeling and feature selection and adjusted parameters of classification algorithms.
+	\end{achievements}
+
+\employer{PayPal - Advanced Risk Sciences}{2013}{Statistical analyst intern}
+	\begin{achievements}
+	\item Built unusual-pattern detecting model for fraud-transactions based on multi-regression. 
+	\item Assembled a multi-threading computing framework for large scale data analyzing. 
+	\item Designed automatical analyzing process including pulling raw data from Teradata warehouse, analyzing data through distributed computing framework and presenting/visualizing the results. 
+	\item Also used principle component analysis (PCA) and local linear embedding (LLE) for feature reduction.
+	\end{achievements}
+
+\employer{Microsoft Research Asia - Data Management, Analytics, and Services}{2013}{Research intern}
+	\begin{achievements}
+	\item Improved online ads displaying and recommender system for advertisers based on collaborative-filtering algorithm and webpage content mining. 
+	\item Used unsupervised clustering for MSN visitors' profile mining and built behavior pattern model for typical clusters. 
+	\item Analyzed telephone records of hotel reservations by NLP tools to develop recommender system for operators. Also tried to incorporate sentiment analysis to automatically rate operators' services quality. 
+	\item Designed and developed interface and animation of a \textsf{Bing} desktop application for personalized searching.
+	\end{achievements}
+
+
+	
+% \employer{Microsoft \& Morgan Stanley - Competition of High Performance for Financial Computing}{2011}{"Mimir" team leader}
+% 	\begin{achievements}
+% 	\item Designed a 150-house complex (Agros, Cyprus) and a multi-tower complex (Odessa, Ukraine.)
+% 	\end{achievements}
+
+
+\header{Research Experience}
+\employer{INRIA - Saclay}{2014}{Graduate research assistant}
+	\begin{achievements}
+	\item Deep learning, reinforcement learning, auto-encoders, restricted Boltzmann machine.
+	\end{achievements}
+
+\employer{Ecole Polytechnique}{2013}{Graduate research assistant}
+	\begin{achievements}
+	\item Information entropy, independent component analysis (ICA), maximum likelihood.
+	\end{achievements}
+
+
+\employer{Chinese Academy of Science - National Laboratory of Pattern Recognition}{2012}{Research assistant}
+	\begin{achievements}
+	\item Face recognition, visual clustering assessment, image processing, sparse coding.
+	\end{achievements}
+
+\header{Patent}
+\patent{Liang Wang, Li Zhong, Zhen Zhou,}{Publication number: \textbf{CN103077404 A,}} {Filing date: 31 Dec 2012, Issued date: 01 May 2013}
+
+\header{Skills}
+\begin{achievements}
+\item Machine learning: supervised methods (SVM, regression, decision trees, neural networks), unsupervised methods (K-means, spectral clustering, EM).
+\item Data mining: feature engineering and reducing, model selection, cross-validation, data visualization.
+\item Toolbox: MapReduce/Hadoop, NoSQL/MongoDB, pandas, scikit-learn, Vowpal Wabbit, LibSVM, Scrapy, OpenCV.
+\item Programming: Python, C++, C\#, R, SQL, Matlab, shell.
+\item Platform: MacOS/UNIX, GNU/Linux, Windows.
+\item Language: English (professional) \hspace*{16pt} Chinese (native) \hspace*{16pt} French (fluent)
+\end{achievements}
+
+\header{Publication}
+\publication{Zhen zhou, Li Zhong, Liang Wang, }{"Locally incremental visual cluster analysis using Markov random field"}{Neurocomputing, Volume 136, 20 July 2014}
+
+
+% \header{Honors and Awards}
+% \begin{achievements}
+% \item  Awarded the 2005 Computer Science Outstanding Undergraduate Award.
+% \item Honored with the prestigious CASP Undergraduate Scholarship from the Cyprus Fulbright Commission.
+% \item  Awarded the First Prize in English Poetry from The English School, Nicosia, Cyprus.
+% \item Included in the Dean's List of Students, for all six completed semesters at the Johns Hopkins University.
+% \end{achievements}
+
+
+\end{document}
